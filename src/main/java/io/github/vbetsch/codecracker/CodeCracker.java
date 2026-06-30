@@ -22,7 +22,7 @@ public class CodeCracker {
     public String encryptString(String string) {
         StringBuilder stringBuilder = new StringBuilder();
         for (char character : string.toCharArray()) {
-            stringBuilder.append(encryptLetter(character));
+            stringBuilder.append(encryptLetter(Character.toLowerCase(character)));
         }
         return stringBuilder.toString();
     }
