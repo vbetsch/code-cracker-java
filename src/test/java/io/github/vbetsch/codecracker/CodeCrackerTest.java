@@ -125,4 +125,17 @@ class CodeCrackerTest {
         // Assert
         assertEquals("ldga(", encryptedWorld);
     }
+
+    @Test
+    void should_handleUpperCaseInEncrypt() {
+        // Arrange
+        CodeCracker codeCracker = new CodeCracker();
+
+        // Act
+        String encryptedHello = codeCracker.encryptString("Hello");
+
+        // Assert
+        assertEquals("&£aad", encryptedHello);
+
+    }
 }
