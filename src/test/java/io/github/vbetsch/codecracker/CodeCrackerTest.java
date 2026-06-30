@@ -136,6 +136,17 @@ class CodeCrackerTest {
 
         // Assert
         assertEquals("&£aad", encryptedHello);
+    }
 
+    @Test
+    void should_handleUnknownCharacters() {
+        // Arrange
+        CodeCracker codeCracker = new CodeCracker();
+
+        // Act
+        String encryptedHello = codeCracker.encryptString("Hello !");
+
+        // Assert
+        assertEquals("&£aad", encryptedHello);
     }
 }
