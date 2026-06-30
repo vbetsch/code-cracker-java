@@ -43,7 +43,7 @@ class CodeCrackerTest {
     }
 
     @Test
-    void should_returnWordHello() {
+    void should_decryptWordHello() {
         // Arrange
         CodeCracker codeCracker = new CodeCracker();
 
@@ -55,7 +55,7 @@ class CodeCrackerTest {
     }
 
     @Test
-    void should_returnWordWorld() {
+    void should_decryptWordWorld() {
         // Arrange
         CodeCracker codeCracker = new CodeCracker();
 
@@ -91,15 +91,14 @@ class CodeCrackerTest {
     }
 
     @Test
-    void should_returnExclamationPointAndEndParenthesis_whenEncryptWordAB() {
+    void should_returnExclamationPointAndEndParenthesis_whenEncryptAB() {
         // Arrange
         CodeCracker codeCracker = new CodeCracker();
 
         // Act
-        String encryptedWordAB = codeCracker.encryptString("ab");
+        String encryptedAB = codeCracker.encryptString("ab");
 
         // Assert
-        assertEquals("!)", encryptedWordAB);
-
+        assertEquals("!)", encryptedAB);
     }
 }
