@@ -35,7 +35,7 @@ class CodeCrackerTest {
         CodeCracker codeCracker = new CodeCracker();
 
         // Act
-        char decryptedString = codeCracker.decryptString("ab");
+        String decryptedString = codeCracker.decryptString("ab");
 
         // Assert
         assertEquals("!)", decryptedString);
