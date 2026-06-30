@@ -7,7 +7,7 @@ import static java.util.Map.entry;
 
 public class CodeCracker {
 
-    private final Map<Character, Character> translations = Map.ofEntries(
+    private final Map<Character, Character> dictionary = Map.ofEntries(
             entry('a', '!'),
             entry('b', ')'),
             entry('c', '"'),
@@ -45,11 +45,11 @@ public class CodeCracker {
     }
 
     public char decryptLetter(char letter) {
-        return translations.get(letter);
+        return dictionary.get(letter);
     }
 
     public char encryptChar(char character) {
-        return invertMap(translations).get(character);
+        return invertMap(dictionary).get(character);
     }
 
     public String decryptWord(String string) {
