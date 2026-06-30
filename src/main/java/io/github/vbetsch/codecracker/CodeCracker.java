@@ -22,6 +22,7 @@ public class CodeCracker {
     public String encryptString(String string) {
         StringBuilder stringBuilder = new StringBuilder();
         for (char character : string.toCharArray()) {
+            if (!dictionary.containsDecryptionValue(Character.toLowerCase(character))) continue;
             stringBuilder.append(encryptLetter(Character.toLowerCase(character)));
         }
         return stringBuilder.toString();

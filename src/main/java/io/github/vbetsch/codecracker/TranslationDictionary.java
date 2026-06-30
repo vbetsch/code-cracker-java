@@ -38,6 +38,14 @@ public class TranslationDictionary {
 
     private final Map<Character, Character> encryptions = invert(decryptions);
 
+    private static Map<Character, Character> invert(Map<Character, Character> map) {
+        Map<Character, Character> inverted = new HashMap<>();
+        for (Map.Entry<Character, Character> entry : map.entrySet()) {
+            inverted.put(entry.getValue(), entry.getKey());
+        }
+        return inverted;
+    }
+
     public Map<Character, Character> getDecryptions() {
         return decryptions;
     }
@@ -46,11 +54,7 @@ public class TranslationDictionary {
         return encryptions;
     }
 
-    private static Map<Character, Character> invert(Map<Character, Character> map) {
-        Map<Character, Character> inverted = new HashMap<>();
-        for (Map.Entry<Character, Character> entry : map.entrySet()) {
-            inverted.put(entry.getValue(), entry.getKey());
-        }
-        return inverted;
+    public boolean containsDecryptionValue(char letter) {
+        return decryptions.containsValue(letter);
     }
 }
