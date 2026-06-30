@@ -1,8 +1,14 @@
 package io.github.vbetsch.codecracker;
 
-public class CodeCracker {
+import java.util.Map;
 
-    public char decrypt(char a) {
-        return '!';
+public class CodeCracker {
+    Map<Character, Character> translations = Map.of(
+            'a', '!',
+            'b', ')'
+    );
+
+    public char decrypt(char letter) {
+        return this.translations.get(letter);
     }
 }
