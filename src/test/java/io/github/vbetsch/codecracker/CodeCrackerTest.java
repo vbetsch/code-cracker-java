@@ -30,7 +30,7 @@ class CodeCrackerTest {
     }
 
     @Test
-    void should_returnExclamationPointAndEndParenthesis_whenDecryptStringAB() {
+    void should_returnExclamationPointAndEndParenthesis_whenDecryptWordAB() {
         // Arrange
         CodeCracker codeCracker = new CodeCracker();
 
