@@ -1,10 +1,5 @@
 package io.github.vbetsch.codecracker;
 
-import java.util.HashMap;
-import java.util.Map;
-
-import static java.util.Map.entry;
-
 public class Cypher {
     private final TranslationDictionary dictionary = new TranslationDictionary();
 
@@ -14,5 +9,13 @@ public class Cypher {
 
     public char encryptChar(char character) {
         return dictionary.getEncryptions().get(character);
+    }
+
+    public String decryptWord(String string) {
+        StringBuilder stringBuilder = new StringBuilder();
+        for (char c : string.toCharArray()) {
+            stringBuilder.append(decryptLetter(c));
+        }
+        return stringBuilder.toString();
     }
 }

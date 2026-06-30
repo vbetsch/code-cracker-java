@@ -12,10 +12,6 @@ public class CodeCracker {
     }
 
     public String decryptWord(String string) {
-        StringBuilder stringBuilder = new StringBuilder();
-        for (char c : string.toCharArray()) {
-            stringBuilder.append(decryptLetter(c));
-        }
-        return stringBuilder.toString();
+        return cypher.decryptWord(string);
     }
 }
