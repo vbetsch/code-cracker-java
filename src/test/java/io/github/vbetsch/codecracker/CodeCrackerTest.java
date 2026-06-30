@@ -53,4 +53,16 @@ class CodeCrackerTest {
         // Assert
         assertEquals("&£aad", decryptedString);
     }
+
+    @Test
+    void should_returnCorrectString_whenDecryptWordWorld() {
+        // Arrange
+        CodeCracker codeCracker = new CodeCracker();
+
+        // Act
+        String decryptedString = codeCracker.decryptWord("world");
+
+        // Assert
+        assertEquals("ldga(", decryptedString);
+    }
 }
