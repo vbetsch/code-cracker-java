@@ -11,4 +11,12 @@ public class CodeCracker {
     public char decrypt(char letter) {
         return this.translations.get(letter);
     }
+
+    public String decryptString(String string) {
+        StringBuilder stringBuilder = new StringBuilder();
+        for (char c : string.toCharArray()) {
+            stringBuilder.append(decrypt(c));
+        }
+        return stringBuilder.toString();
+    }
 }
