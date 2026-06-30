@@ -1,5 +1,7 @@
 # Code Cracker
 
+> JVM used : **26.0.1-tem**
+
 ## Problem Description
 
 Given an alphabet decryption key like the one below, create a program that can crack any message
