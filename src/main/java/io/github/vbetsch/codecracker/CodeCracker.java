@@ -8,14 +8,14 @@ public class CodeCracker {
             'b', ')'
     );
 
-    public char decrypt(char letter) {
+    public char decryptLetter(char letter) {
         return this.translations.get(letter);
     }
 
     public String decryptWord(String string) {
         StringBuilder stringBuilder = new StringBuilder();
         for (char c : string.toCharArray()) {
-            stringBuilder.append(decrypt(c));
+            stringBuilder.append(decryptLetter(c));
         }
         return stringBuilder.toString();
     }

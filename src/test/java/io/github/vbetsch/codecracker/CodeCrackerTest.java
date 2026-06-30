@@ -11,7 +11,7 @@ class CodeCrackerTest {
         CodeCracker codeCracker = new CodeCracker();
 
         // Act
-        char decryptedLetterA = codeCracker.decrypt('a');
+        char decryptedLetterA = codeCracker.decryptLetter('a');
 
         // Assert
         assertEquals('!', decryptedLetterA);
@@ -23,7 +23,7 @@ class CodeCrackerTest {
         CodeCracker codeCracker = new CodeCracker();
 
         // Act
-        char decryptedLetterA = codeCracker.decrypt('b');
+        char decryptedLetterA = codeCracker.decryptLetter('b');
 
         // Assert
         assertEquals(')', decryptedLetterA);
