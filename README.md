@@ -1,5 +1,7 @@
 # Code Cracker
 
+![CI](https://github.com/vbetsch/code-cracker-java/actions/workflows/ci.yml/badge.svg)
+
 > JVM used : **26.0.1-tem**
 
 ## Problem Description
