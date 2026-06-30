@@ -3,7 +3,7 @@ package io.github.vbetsch.codecracker;
 import java.util.Map;
 
 public class CodeCracker {
-    final Map<Character, Character> translations = Map.of(
+    private final Map<Character, Character> translations = Map.of(
             'a', '!',
             'b', ')'
     );
