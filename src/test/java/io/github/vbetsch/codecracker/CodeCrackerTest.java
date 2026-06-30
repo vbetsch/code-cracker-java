@@ -101,4 +101,28 @@ class CodeCrackerTest {
         // Assert
         assertEquals("!)", encryptedAB);
     }
+
+    @Test
+    void should_encryptWordHello() {
+        // Arrange
+        CodeCracker codeCracker = new CodeCracker();
+
+        // Act
+        String encryptedAB = codeCracker.encryptString("hello");
+
+        // Assert
+        assertEquals("&£aad", encryptedAB);
+    }
+
+    @Test
+    void should_encryptWordWorld() {
+        // Arrange
+        CodeCracker codeCracker = new CodeCracker();
+
+        // Act
+        String encryptedAB = codeCracker.encryptString("world");
+
+        // Assert
+        assertEquals("ldga(", encryptedAB);
+    }
 }
