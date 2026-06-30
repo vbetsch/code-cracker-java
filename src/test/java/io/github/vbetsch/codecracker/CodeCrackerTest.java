@@ -108,10 +108,10 @@ class CodeCrackerTest {
         CodeCracker codeCracker = new CodeCracker();
 
         // Act
-        String encryptedAB = codeCracker.encryptString("hello");
+        String encryptedHello = codeCracker.encryptString("hello");
 
         // Assert
-        assertEquals("&£aad", encryptedAB);
+        assertEquals("&£aad", encryptedHello);
     }
 
     @Test
@@ -120,9 +120,9 @@ class CodeCrackerTest {
         CodeCracker codeCracker = new CodeCracker();
 
         // Act
-        String encryptedAB = codeCracker.encryptString("world");
+        String encryptedWorld = codeCracker.encryptString("world");
 
         // Assert
-        assertEquals("ldga(", encryptedAB);
+        assertEquals("ldga(", encryptedWorld);
     }
 }
