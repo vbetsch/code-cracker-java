@@ -77,4 +77,16 @@ class CodeCrackerTest {
         // Assert
         assertEquals('a', encryptedExclamationPoint);
     }
+
+    @Test
+    void should_returnLetterB_whenEncryptCharEndParenthesis() {
+        // Arrange
+        CodeCracker codeCracker = new CodeCracker();
+
+        // Act
+        char encryptedExclamationPoint = codeCracker.encryptChar(')');
+
+        // Assert
+        assertEquals('b', encryptedExclamationPoint);
+    }
 }
