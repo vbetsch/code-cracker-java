@@ -17,4 +17,16 @@ class CodeCrackerTest {
         assertEquals('!', decryptedLetterA);
     }
 
+    @Test
+    void should_returnEndParenthesis_whenDecryptLetterB() {
+        // Arrange
+        CodeCracker codeCracker = new CodeCracker();
+
+        // Act
+        char decryptedLetterA = codeCracker.decrypt('b');
+
+        // Assert
+        assertEquals(')', decryptedLetterA);
+    }
+
 }
