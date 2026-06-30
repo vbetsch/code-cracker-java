@@ -29,4 +29,15 @@ class CodeCrackerTest {
         assertEquals(')', decryptedLetterA);
     }
 
+    @Test
+    void should_returnExclamationPointAndEndParenthesis_whenDecryptStringAB() {
+        // Arrange
+        CodeCracker codeCracker = new CodeCracker();
+
+        // Act
+        char decryptedString = codeCracker.decryptString("ab");
+
+        // Assert
+        assertEquals("!)", decryptedString);
+    }
 }
