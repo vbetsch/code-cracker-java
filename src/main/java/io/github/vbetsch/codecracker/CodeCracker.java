@@ -1,5 +1,6 @@
 package io.github.vbetsch.codecracker;
 
+import java.util.HashMap;
 import java.util.Map;
 
 import static java.util.Map.entry;
@@ -35,8 +36,20 @@ public class CodeCracker {
             entry('z', 'o')
     );
 
+    private static Map<Character, Character> invertMap(Map<Character, Character> map) {
+        Map<Character, Character> inverted = new HashMap<>();
+        for (Map.Entry<Character, Character> entry : map.entrySet()) {
+            inverted.put(entry.getValue(), entry.getKey());
+        }
+        return inverted;
+    }
+
     public char decryptLetter(char letter) {
         return translations.get(letter);
+    }
+
+    public char encryptChar(char character) {
+        return invertMap(translations).get(character);
     }
 
     public String decryptWord(String string) {
