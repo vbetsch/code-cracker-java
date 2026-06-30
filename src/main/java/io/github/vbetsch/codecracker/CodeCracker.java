@@ -1,10 +1,5 @@
 package io.github.vbetsch.codecracker;
 
-import java.util.HashMap;
-import java.util.Map;
-
-import static java.util.Map.entry;
-
 public class CodeCracker {
     private final Cypher cypher = new Cypher();
 
