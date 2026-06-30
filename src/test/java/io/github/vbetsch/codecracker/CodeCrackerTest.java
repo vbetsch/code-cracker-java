@@ -12,10 +12,10 @@ class CodeCrackerTest {
         CodeCracker codeCracker = new CodeCracker();
 
         // Act
-        char decryptedLetterA = codeCracker.decryptLetter('a');
+        char decryptedLetterA = codeCracker.decryptLetter('!');
 
         // Assert
-        assertEquals('!', decryptedLetterA);
+        assertEquals('a', decryptedLetterA);
     }
 
     @Test
@@ -24,10 +24,10 @@ class CodeCrackerTest {
         CodeCracker codeCracker = new CodeCracker();
 
         // Act
-        char decryptedLetterA = codeCracker.decryptLetter('b');
+        char decryptedLetterA = codeCracker.decryptLetter(')');
 
         // Assert
-        assertEquals(')', decryptedLetterA);
+        assertEquals('b', decryptedLetterA);
     }
 
     @Test
@@ -36,10 +36,10 @@ class CodeCrackerTest {
         CodeCracker codeCracker = new CodeCracker();
 
         // Act
-        String decryptedString = codeCracker.decryptWord("ab");
+        String decryptedString = codeCracker.decryptWord("!)");
 
         // Assert
-        assertEquals("!)", decryptedString);
+        assertEquals("ab", decryptedString);
     }
 
     @Test
@@ -48,10 +48,10 @@ class CodeCrackerTest {
         CodeCracker codeCracker = new CodeCracker();
 
         // Act
-        String decryptedString = codeCracker.decryptWord("hello");
+        String decryptedString = codeCracker.decryptWord("&£aad");
 
         // Assert
-        assertEquals("&£aad", decryptedString);
+        assertEquals("hello", decryptedString);
     }
 
     @Test
@@ -60,10 +60,10 @@ class CodeCrackerTest {
         CodeCracker codeCracker = new CodeCracker();
 
         // Act
-        String decryptedString = codeCracker.decryptWord("world");
+        String decryptedString = codeCracker.decryptWord("ldga(");
 
         // Assert
-        assertEquals("ldga(", decryptedString);
+        assertEquals("world", decryptedString);
     }
 
     @Test
@@ -72,10 +72,10 @@ class CodeCrackerTest {
         CodeCracker codeCracker = new CodeCracker();
 
         // Act
-        char encryptedExclamationPoint = codeCracker.encryptChar('!');
+        char encryptedExclamationPoint = codeCracker.encryptChar('a');
 
         // Assert
-        assertEquals('a', encryptedExclamationPoint);
+        assertEquals('!', encryptedExclamationPoint);
     }
 
     @Test
@@ -84,10 +84,10 @@ class CodeCrackerTest {
         CodeCracker codeCracker = new CodeCracker();
 
         // Act
-        char encryptedEndParenthesis = codeCracker.encryptChar(')');
+        char encryptedEndParenthesis = codeCracker.encryptChar('b');
 
         // Assert
-        assertEquals('b', encryptedEndParenthesis);
+        assertEquals(')', encryptedEndParenthesis);
     }
 
     @Test
@@ -96,10 +96,10 @@ class CodeCrackerTest {
         CodeCracker codeCracker = new CodeCracker();
 
         // Act
-        String encryptedExclamationPointAndEndParenthesis = codeCracker.encryptString("!)");
+        String encryptedExclamationPointAndEndParenthesis = codeCracker.encryptString("ab");
 
         // Assert
-        assertEquals("ab", encryptedExclamationPointAndEndParenthesis);
+        assertEquals("!)", encryptedExclamationPointAndEndParenthesis);
 
     }
 }
