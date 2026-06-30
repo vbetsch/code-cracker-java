@@ -1,6 +1,7 @@
 package io.github.vbetsch.codecracker;
 
 import org.junit.jupiter.api.Test;
+
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class CodeCrackerTest {
@@ -39,5 +40,17 @@ class CodeCrackerTest {
 
         // Assert
         assertEquals("!)", decryptedString);
+    }
+
+    @Test
+    void should_returnCorrectString_whenDecryptWordHello() {
+        // Arrange
+        CodeCracker codeCracker = new CodeCracker();
+
+        // Act
+        String decryptedString = codeCracker.decryptWord("hello");
+
+        // Assert
+        assertEquals("&£aad", decryptedString);
     }
 }
