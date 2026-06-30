@@ -12,7 +12,7 @@ public class CodeCracker {
         return this.translations.get(letter);
     }
 
-    public String decryptString(String string) {
+    public String decryptWord(String string) {
         StringBuilder stringBuilder = new StringBuilder();
         for (char c : string.toCharArray()) {
             stringBuilder.append(decrypt(c));
