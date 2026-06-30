@@ -84,9 +84,22 @@ class CodeCrackerTest {
         CodeCracker codeCracker = new CodeCracker();
 
         // Act
-        char encryptedExclamationPoint = codeCracker.encryptChar(')');
+        char encryptedEndParenthesis = codeCracker.encryptChar(')');
 
         // Assert
-        assertEquals('b', encryptedExclamationPoint);
+        assertEquals('b', encryptedEndParenthesis);
+    }
+
+    @Test
+    void should_returnWordAB_whenEncryptExclamationPointAndEndParenthesis() {
+        // Arrange
+        CodeCracker codeCracker = new CodeCracker();
+
+        // Act
+        String encryptedExclamationPointAndEndParenthesis = codeCracker.encryptString("!)");
+
+        // Assert
+        assertEquals("ab", encryptedExclamationPointAndEndParenthesis);
+
     }
 }
