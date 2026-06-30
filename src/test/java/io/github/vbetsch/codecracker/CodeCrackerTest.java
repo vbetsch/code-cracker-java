@@ -65,4 +65,16 @@ class CodeCrackerTest {
         // Assert
         assertEquals("ldga(", decryptedString);
     }
+
+    @Test
+    void should_returnLetterA_whenEncryptCharExclamationPoint() {
+        // Arrange
+        CodeCracker codeCracker = new CodeCracker();
+
+        // Act
+        char encryptedExclamationPoint = codeCracker.encryptChar('!');
+
+        // Assert
+        assertEquals('a', encryptedExclamationPoint);
+    }
 }
