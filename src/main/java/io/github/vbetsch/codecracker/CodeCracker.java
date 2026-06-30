@@ -13,16 +13,16 @@ public class CodeCracker {
 
     public String decryptString(String string) {
         StringBuilder stringBuilder = new StringBuilder();
-        for (char c : string.toCharArray()) {
-            stringBuilder.append(decryptChar(c));
+        for (char character : string.toCharArray()) {
+            stringBuilder.append(decryptChar(character));
         }
         return stringBuilder.toString();
     }
 
     public String encryptString(String string) {
         StringBuilder stringBuilder = new StringBuilder();
-        for (char c : string.toCharArray()) {
-            stringBuilder.append(encryptLetter(c));
+        for (char character : string.toCharArray()) {
+            stringBuilder.append(encryptLetter(character));
         }
         return stringBuilder.toString();
     }
