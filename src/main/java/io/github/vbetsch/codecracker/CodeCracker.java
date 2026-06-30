@@ -18,4 +18,12 @@ public class CodeCracker {
         }
         return stringBuilder.toString();
     }
+
+    public String encryptString(String string) {
+        StringBuilder stringBuilder = new StringBuilder();
+        for (char c : string.toCharArray()) {
+            stringBuilder.append(encryptChar(c));
+        }
+        return stringBuilder.toString();
+    }
 }
