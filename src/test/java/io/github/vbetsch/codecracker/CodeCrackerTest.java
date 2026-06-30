@@ -7,99 +7,99 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 class CodeCrackerTest {
 
     @Test
-    void should_returnExclamationPoint_whenDecryptLetterA() {
+    void should_returnLetterA_whenDecryptExclamationPoint() {
         // Arrange
         CodeCracker codeCracker = new CodeCracker();
 
         // Act
-        char decryptedLetterA = codeCracker.decryptLetter('!');
+        char decryptedExclamationPoint = codeCracker.decryptChar('!');
 
         // Assert
-        assertEquals('a', decryptedLetterA);
+        assertEquals('a', decryptedExclamationPoint);
     }
 
     @Test
-    void should_returnEndParenthesis_whenDecryptLetterB() {
+    void should_returnLetterB_whenDecryptEndParenthesis() {
         // Arrange
         CodeCracker codeCracker = new CodeCracker();
 
         // Act
-        char decryptedLetterA = codeCracker.decryptLetter(')');
+        char decryptedEndParenthesis = codeCracker.decryptChar(')');
 
         // Assert
-        assertEquals('b', decryptedLetterA);
+        assertEquals('b', decryptedEndParenthesis);
     }
 
     @Test
-    void should_returnExclamationPointAndEndParenthesis_whenDecryptWordAB() {
+    void should_returnWordAB_whenDecryptExclamationPointAndEndParenthesis() {
         // Arrange
         CodeCracker codeCracker = new CodeCracker();
 
         // Act
-        String decryptedString = codeCracker.decryptWord("!)");
+        String decryptedString = codeCracker.decryptString("!)");
 
         // Assert
         assertEquals("ab", decryptedString);
     }
 
     @Test
-    void should_returnCorrectString_whenDecryptWordHello() {
+    void should_returnWordHello() {
         // Arrange
         CodeCracker codeCracker = new CodeCracker();
 
         // Act
-        String decryptedString = codeCracker.decryptWord("&£aad");
+        String decryptedString = codeCracker.decryptString("&£aad");
 
         // Assert
         assertEquals("hello", decryptedString);
     }
 
     @Test
-    void should_returnCorrectString_whenDecryptWordWorld() {
+    void should_returnWordWorld() {
         // Arrange
         CodeCracker codeCracker = new CodeCracker();
 
         // Act
-        String decryptedString = codeCracker.decryptWord("ldga(");
+        String decryptedString = codeCracker.decryptString("ldga(");
 
         // Assert
         assertEquals("world", decryptedString);
     }
 
     @Test
-    void should_returnLetterA_whenEncryptCharExclamationPoint() {
+    void should_returnExclamationPoint_whenEncryptLetterA() {
         // Arrange
         CodeCracker codeCracker = new CodeCracker();
 
         // Act
-        char encryptedExclamationPoint = codeCracker.encryptChar('a');
+        char encryptedLetterA = codeCracker.encryptLetter('a');
 
         // Assert
-        assertEquals('!', encryptedExclamationPoint);
+        assertEquals('!', encryptedLetterA);
     }
 
     @Test
-    void should_returnLetterB_whenEncryptCharEndParenthesis() {
+    void should_returnEndParenthesis_whenEncryptLetterB() {
         // Arrange
         CodeCracker codeCracker = new CodeCracker();
 
         // Act
-        char encryptedEndParenthesis = codeCracker.encryptChar('b');
+        char encryptedLetterB = codeCracker.encryptLetter('b');
 
         // Assert
-        assertEquals(')', encryptedEndParenthesis);
+        assertEquals(')', encryptedLetterB);
     }
 
     @Test
-    void should_returnWordAB_whenEncryptExclamationPointAndEndParenthesis() {
+    void should_returnExclamationPointAndEndParenthesis_whenEncryptWordAB() {
         // Arrange
         CodeCracker codeCracker = new CodeCracker();
 
         // Act
-        String encryptedExclamationPointAndEndParenthesis = codeCracker.encryptString("ab");
+        String encryptedWordAB = codeCracker.encryptString("ab");
 
         // Assert
-        assertEquals("!)", encryptedExclamationPointAndEndParenthesis);
+        assertEquals("!)", encryptedWordAB);
 
     }
 }

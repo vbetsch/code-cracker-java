@@ -3,18 +3,18 @@ package io.github.vbetsch.codecracker;
 public class CodeCracker {
     private final TranslationDictionary dictionary = new TranslationDictionary();
 
-    public char decryptLetter(char letter) {
+    public char decryptChar(char letter) {
         return dictionary.getDecryptions().get(letter);
     }
 
-    public char encryptChar(char character) {
+    public char encryptLetter(char character) {
         return dictionary.getEncryptions().get(character);
     }
 
-    public String decryptWord(String string) {
+    public String decryptString(String string) {
         StringBuilder stringBuilder = new StringBuilder();
         for (char c : string.toCharArray()) {
-            stringBuilder.append(decryptLetter(c));
+            stringBuilder.append(decryptChar(c));
         }
         return stringBuilder.toString();
     }
@@ -22,7 +22,7 @@ public class CodeCracker {
     public String encryptString(String string) {
         StringBuilder stringBuilder = new StringBuilder();
         for (char c : string.toCharArray()) {
-            stringBuilder.append(encryptChar(c));
+            stringBuilder.append(encryptLetter(c));
         }
         return stringBuilder.toString();
     }
